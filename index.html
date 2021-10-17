@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">    <title> Mis Gastos </title>
+    <link rel="icon" href="./Images/logoDos.png" style="border-radius: 20%;">
+</head>
+<body id="body" onload="refreshView()">
+    <!--Loader Page -->
+    <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
+        <div class="container" style="padding-top: 10px; width: 100%;">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <a class="nav--link active" aria-current="page" href="#">INICIO</a>
+                            <a class="nav--link " href="#">NOSOTROS</a>
+                            <a class="nav--link" href="#">LOGIN</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- APPLICATION -->
+            <div id="App" class="row pt-4" style="width: 90%; margin-left: auto; margin-right: auto;">
+                <!-- FORM -->
+                <div class="text text-center">
+                    <p class="h1"><span id="h1">La App que te ayuda a tener un mayor control de tus gastos semanales.</span></p>
+                </div>
+                <div class="col-md-12" style="margin-top:10px;" id="divBalance">
+                    <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title ">Coloca tu presupuesto</h4>
+                          <form action="" id="formBalance">
+                            <input type="number" class="form-control" id="initialBalance" placeholder="Ingresa tu Presupuesto" style="width: 100%;">
+                            <input type="button" class="btn btn-outline-dark" id="addBudget" value="Crear Presupuesto " style="width: 100%;">
+                        </form>
+                        <div id="errorMessage--Balance" style="margin-top: 5px;"></div>  
+                          
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-5" style="margin-top: 10px; margin-bottom: 10px;" id="divExpense">
+                    <div class="card">
+                        <div class="card-header bg-info">
+                            <h4>Agrega tus gastos</h4>
+                        </div>
+                        <form id="product-form" class="card-body">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Ej: Transporte" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="price"  placeholder="Ej: 500"
+                                    class="form-control">
+                            </div>
+                            <div id="errorMessage--Expense--Name" style="margin-top: 5px;"></div> 
+                            <div id="errorMessage--Expense--Price" style="margin-top: 5px;"></div> 
+                            <button type="button" class="btn btn-outline-dark " id="btnAdd">Añadir Gasto</button>
+                        </form>
+                    </div>
+                    <div class="card" style="margin-top: 5px;" id="divRemaining"></div>
+
+                </div>
+                <!-- LIST -->
+                <div class="col-md-7" style="margin-top: 10px;" id="divList">
+                    <div class="card ">
+                        <div class="card-header bg-info">
+                          <h4>Listado</h4>
+                        </div>
+                        <div class="card-body" id="product-list">
+
+                        </div>
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

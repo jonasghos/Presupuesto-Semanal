@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles-->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">    <title> Mis Gastos </title>
     <link rel="icon" href="./Images/logoDos.png" style="border-radius: 20%;">
+    <!-- Social Buttons -->
+    <script src="https://kit.fontawesome.com/9c7fb005b9.js" crossorigin="anonymous"></script>
 </head>
 <body id="body" onload="refreshView()">
     <!--Loader Page -->
     <div id="contenedor_carga">
         <div id="carga"></div>
     </div>
-        <div class="container" style="padding-top: 10px; width: 100%;">
-            <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" style=" width: 100%; padding-top: 10px; height: 94vh;">
+            <nav class="navbar navbar-expand-xl" style="width: 100%;">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                         <div class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -49,7 +50,7 @@
                 </div>
                 <div class="col-md-5" style="margin-top: 10px; margin-bottom: 10px;" id="divExpense">
                     <div class="card">
-                        <div class="card-header bg-info">
+                        <div class="card-header bg-dark text-light">
                             <h4>Agrega tus gastos</h4>
                         </div>
                         <form id="product-form" class="card-body">
@@ -71,16 +72,26 @@
                 <!-- LIST -->
                 <div class="col-md-7" style="margin-top: 10px;" id="divList">
                     <div class="card ">
-                        <div class="card-header bg-info">
+                        <div class="card-header bg-dark text-light">
                           <h4>Listado</h4>
                         </div>
                         <div class="card-body" id="product-list">
 
                         </div>
-                      </div>
-
+                    </div>
                 </div>
-
+            </div>
+        </div>
+        <div class="footer col-md-12">
+            <div class="footer__copyright text-center">
+                <p class="footer__copyright--text"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="20" height="20"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><defs><linearGradient x1="86" y1="21.5" x2="86" y2="150.5" gradientUnits="userSpaceOnUse" id="color-1_x8PWa4ZypXUE_gr1"><stop offset="0" stop-color="#ffffff"></stop><stop offset="1" stop-color="#ffffff"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="url(#color-1_x8PWa4ZypXUE_gr1)"><path d="M86,21.5c-35.69423,0.1972 -64.52027,29.19939 -64.5,64.89417c0.21738,35.57025 29.19056,64.25 64.76117,64.1053c35.57062,-0.1447 64.30951,-29.05922 64.23749,-64.63005c-0.07202,-35.57084 -28.92775,-64.36875 -64.49866,-64.36941zM86,136.16667c-27.70628,0 -50.16667,-22.46038 -50.16667,-50.16667c0,-27.70628 22.46038,-50.16667 50.16667,-50.16667c27.70628,0 50.16667,22.46038 50.16667,50.16667c0,27.70628 -22.46038,50.16667 -50.16667,50.16667zM110.553,96.75c1.06747,-0.00502 2.0816,0.46614 2.76621,1.28518c0.68461,0.81904 0.96841,1.90066 0.77412,2.95032c-0.9514,5.53804 -3.72611,10.59936 -7.88333,14.37992c-5.62011,4.514 -12.69814,6.8147 -19.89825,6.46792c-8.08823,0.39406 -15.91228,-2.93383 -21.23842,-9.03358c-5.50231,-7.05035 -8.25323,-15.86093 -7.74,-24.7895v-4.26058c-0.12107,-6.1003 1.10233,-12.15245 3.58333,-17.72675c2.14886,-4.85144 5.70068,-8.94864 10.19817,-11.76408c4.64138,-2.78861 9.97696,-4.20729 15.39042,-4.09217c7.09933,-0.34391 14.07444,1.9539 19.57933,6.45c4.11449,3.77023 6.88932,8.77777 7.90483,14.26525c0.22822,1.06609 -0.03731,2.17823 -0.72253,3.02623c-0.68522,0.848 -1.71681,1.34113 -2.80705,1.34186h-7.01975c-1.71921,-0.00879 -3.1899,-1.23737 -3.5045,-2.92758c-0.40053,-2.74468 -1.628,-5.30211 -3.51883,-7.3315c-2.79743,-2.23601 -6.34151,-3.32256 -9.9115,-3.03867c-4.25555,-0.27268 -8.34979,1.67347 -10.82525,5.14567c-2.75456,4.85498 -4.0358,10.407 -3.68725,15.97808v5.27108c-0.41744,5.72264 0.77675,11.44778 3.44717,16.52633c2.43489,3.55341 6.57606,5.54346 10.87183,5.2245c3.60068,0.28192 7.17506,-0.80588 10.00825,-3.04583c1.90782,-2.05657 3.16239,-4.63306 3.60483,-7.40317c0.32639,-1.6775 1.79197,-2.89107 3.50092,-2.89892z"></path></g></g></svg>
+                    Todos los derechos reservados.</p>
+            </div>
+            <div class="footer__link text-end">
+                <a href="https://www.linkedin.com/in/jonasgho/" class="nick ">By JonasG</a>
             </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

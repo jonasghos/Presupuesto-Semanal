@@ -158,7 +158,7 @@
       divError.innerHTML = `<p class="alert-error"> ¡${message}!</p>`;
       setTimeout(() => {
          divError.innerHTML=``;
-      }, 4000);
+      }, 3000);
 
    }
 
